@@ -1,9 +1,27 @@
+html {
+  // Colors
+  // Base Color
+  --white-color: hsl(36, 100%, 99%);
+
+  // Primary Color
+  --primary-color: hsl(5, 85%, 63%);
+
+  // Neutral Colors
+  --neutral-color: hsl(236, 13%, 42%);
+
+  --title-color: hsl(35, 77%, 62%);
+  --subtitle-color: hsl(233, 8%, 79%);
+  --box-color: hsl(240, 100%, 5%);
+  --background-color: var(--white-color);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--background-color);
 }
 
 a {
