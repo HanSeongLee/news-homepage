@@ -1,0 +1,69 @@
+
+.menu {
+  position: relative;
+
+  &.open {
+    .overlay {
+      visibility: visible;
+      opacity: 0.5;
+    }
+
+    .menuList {
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00001A;
+    mix-blend-mode: normal;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.3s, opacity 0.3s ease-in;
+  }
+
+  .menuList {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 256px;
+    height: 100%;
+    min-height: 669px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: var(--background-color);
+    list-style: none;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: visibility 0.3s, transform 0.3s ease-in;
+    padding: 120px 29px 144px 24px;
+
+    .menuItem {
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--title-color);
+    }
+
+    a {
+      display: flex;
+    }
+  }
+
+  .menuButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &.close {
+      position: absolute;
+      top: 27.3px;
+      right: 20.8px;
+    }
+  }
+}
