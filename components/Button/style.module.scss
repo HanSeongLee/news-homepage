@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .button {
   width: 185px;
@@ -16,5 +17,13 @@
     letter-spacing: 4.375px;
     color: var(--white-color);
     background: var(--primary-color);
+
+    @include media(">desktop") {
+      transition: background 0.3s;
+
+      &:hover {
+        background: var(--box-color);
+      }
+    }
   }
 }
