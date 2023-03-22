@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .logo {
   display: flex;
@@ -8,5 +9,9 @@
 
   .symbol {
     height: 28px;
+
+    @include media(">desktop") {
+      height: 39.9px;
+    }
   }
 }
