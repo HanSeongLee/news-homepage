@@ -26,7 +26,7 @@ const Menu: React.FC<IMenuProps> = ({
                  onClick={onClose}
             />
             <ul className={styles.menuList}>
-                <li>
+                <li className={styles.closeMenuItem}>
                     <button className={cn(styles.menuButton, styles.close)}
                             type={'button'}
                             title={'Menu Close'}

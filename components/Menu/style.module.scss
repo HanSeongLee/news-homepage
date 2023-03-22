@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .menu {
   position: relative;
@@ -9,6 +10,7 @@
     }
 
     .menuList {
+      right: 0;
       visibility: visible;
       transform: translateX(0);
     }
@@ -25,6 +27,10 @@
     opacity: 0;
     visibility: hidden;
     transition: visibility 0.3s, opacity 0.3s ease-in;
+
+    @include media(">desktop") {
+      display: none;
+    }
   }
 
   .menuList {
@@ -44,10 +50,41 @@
     transition: visibility 0.3s, transform 0.3s ease-in;
     padding: 120px 29px 144px 24px;
 
+    @include media(">desktop") {
+      position: relative;
+      width: auto;
+      height: initial;
+      min-height: initial;
+      flex-direction: row;
+      gap: 40px;
+      visibility: visible;
+      transform: initial;
+      opacity: 1;
+      padding: 0px;
+      transition: none;
+    }
+
+    .closeMenuItem {
+      @include media(">desktop") {
+        display: none;
+      }
+    }
+
     .menuItem {
       font-size: 18px;
       line-height: 24px;
       color: var(--title-color);
+
+      @include media(">desktop") {
+        font-size: 15px;
+        line-height: 26px;
+        color: var(--neutral-color);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
     }
 
     a {
@@ -59,6 +96,10 @@
     background: transparent;
     border: none;
     cursor: pointer;
+
+    @include media(">desktop") {
+      display: none;
+    }
 
     &.close {
       position: absolute;
