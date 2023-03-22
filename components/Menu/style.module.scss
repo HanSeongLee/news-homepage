@@ -78,6 +78,7 @@
       @include media(">desktop") {
         font-size: 15px;
         line-height: 26px;
+        letter-spacing: 0.35px;
         color: var(--neutral-color);
         transition: color 0.3s;
 
